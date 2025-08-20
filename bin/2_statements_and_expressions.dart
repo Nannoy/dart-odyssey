@@ -56,4 +56,92 @@ example, 10 modulo 3 equals 1, because 3 goes into 10 three times, with a remain
     "Print the value of 1 over the square root of 2 . Confirm that it equals the sine of 45°",
   );
   print((1 / sqrt(2)) == sin(45)); //NB: == is used to compare
+
+  //Naming Data
+  /*
+  As you've got a name also, while coding in dart you can also name your data 
+  and refer to the data with the name you gave it.
+  */
+  print("------ Naming Data ------");
+  print("--Variables--");
+  int number = 10;
+  print(number);
+
+  /*
+  You can also do cool things with numbers like 
+  */
+
+  print(number.isEven);
+
+  /*
+  Type Safety
+  Dart is a type safe language when you tell it a variable type is int you cant
+  change it back to double. Just like you cant change a male back to a female
+
+  int myNumber = 40;
+
+  its not possible to later do
+
+  myNumber = 50.7;
+
+  it is not allowed
+  */
+
+  print("--Type Interface--");
+  /*
+  Sometimes you dont want to tell dart which type your variable is
+  using 'var' instead of 'int', 'double', etc. automatically tells dart to use
+  the appropriate type
+  */
+
+  var something = 10;
+  print(
+    something.runtimeType,
+  ); //you can use .runtimeType to get the variable type
+
+  /*
+  Constants
+  Dart has 2 different types of variables, they are decleared with 'const' 
+  and 'final' keyword
+
+  -Const Constants
+  variables that their values can change areknown as mutable data.if you dont 
+  want the value of your variable to be changed you use 'const' thus making 
+  it immutable
+
+  -Final Constants
+  You know a variable has to be constant but the value has not been defined yet, 
+  probably the value will be defined after the code has been running like 
+  fetching data from API
+
+E.g: final hoursSinceMidnight = DateTime.now().hour;
+  */
+
+  print("------Increment and Decrement------");
+
+  /*
+  if we have a variable 'counter'
+  var counter = 0;
+
+  if we want to increase it we can do
+  counter + 1; 
+  or
+  counter -1; to decrease it
+
+  but we can also do
+  counter += 1; to increase
+  and also counter -= 1; to decrease
+
+  both are same!
+
+  if we want to keed incremanting by 1 or decreasing by 1 we can do
+  counter ++;
+  and counter --;
+  */
+
+  var counter = 0;
+  print(counter += 1);
+  print(counter -= 1);
+  print(counter++);
+  print(counter--);
 }
